@@ -44,3 +44,15 @@ treemap.c:47:6: note: declared here
       ^~~~~~~~~~~~~
 cc1.exe: all warnings being treated as errors
 6bab745
+Thu, May  1, 2025  9:32:13 PM: 
+ treemap.c | 13 +++----------
+ 1 file changed, 3 insertions(+), 10 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c:56:12: error: redefinition of 'minimum'
+ TreeNode * minimum(TreeNode * x){
+            ^~~~~~~
+treemap.c:51:12: note: previous definition of 'minimum' was here
+ TreeNode * minimum(TreeNode * x){
+            ^~~~~~~
+892a827
