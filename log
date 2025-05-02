@@ -141,3 +141,13 @@ Thu, May  1, 2025 10:27:09 PM:
  tests:  18|3
 total_score: 40/70
 b198246
+Thu, May  1, 2025 10:33:27 PM: 
+ treemap.c | 21 +++++++++++++++++++--
+ 1 file changed, 19 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'nextTreeMap':
+treemap.c:152:43: error: lvalue required as left operand of assignment
+     while (parent != NULL && parent->left = node) {
+                                           ^
+8f58012
