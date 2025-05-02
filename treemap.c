@@ -142,16 +142,18 @@ Pair * nextTreeMap(TreeMap * tree) {
     if (tree->current == NULL) return NULL;
     TreeNode* node = tree->current;
 
-    if (node->left != NULL) {
-        node = minimum(node->left);
+    if (node->right != NULL) {
+        node = minimum(node->right);
         tree->current = node;
         return node->pair;
     }
 
     TreeNode* parent = node->parent;
-    while (parent != NULL && parent->left == node) {
+    while (parent != NULL && parent->right == node) {
         node = parent;
         parent = parent->parent;
     }
-    return NULL;
+    
+    tree->current = parent;
+    return (parent != NULL) ? parent->pair : NULL;
 }
